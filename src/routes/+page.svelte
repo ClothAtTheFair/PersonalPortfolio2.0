@@ -33,12 +33,17 @@
 			</picture>
 		</span>
 
+	</h1>
+
+	<br>
+
+	<h1>
 		My name is Bradley
 	</h1>
 
-	<h2>
-		To put is simply, I am...
-	</h2>
+	<h1>
+		To put is simply, I am a...
+	</h1>
 
 	{#key i}
 	<p in:typewriter={{ speed: 10}}>
@@ -49,7 +54,7 @@
 
 <style>
 	section {
-		display: flex;
+		display: block;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
@@ -65,7 +70,7 @@
 		position: relative;
 		width: 100%;
 		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
+		padding: 0 0 calc(100% * 495 / 2048) 2%;
 	}
 
 	.welcome img {
