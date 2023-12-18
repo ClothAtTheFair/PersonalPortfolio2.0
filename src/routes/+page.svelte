@@ -1,7 +1,22 @@
 <script>
-	import Counter from './Counter.svelte';
-	import welcome from '$lib/images/svelte-welcome.webp';
-	import welcome_fallback from '$lib/images/svelte-welcome.png';
+	import welcome from '$lib/images/welcom.png';
+	import welcome_fallback from '$lib/images/welcom.png';
+	import { onMount } from 'svelte';
+	import { typewriter } from './transition';
+	import { messages } from './loading-messages.js';
+
+	let i = -1;
+
+	onMount(() => {
+		const interval = setInterval(() => {
+			i += 1;
+			i %= messages.length;
+		}, 2500);
+
+		return () => {
+			clearInterval(interval);
+		};
+	});
 </script>
 
 <svelte:head>
@@ -18,14 +33,18 @@
 			</picture>
 		</span>
 
-		to your new<br />SvelteKit app
+		My name is Bradley
 	</h1>
 
 	<h2>
-		try editing <strong>src/routes/+page.svelte</strong>
+		To put is simply, I am...
 	</h2>
 
-	<Counter />
+	{#key i}
+	<p in:typewriter={{ speed: 10}}>
+		{messages[i] || ''}
+	</p>
+	{/key}
 </section>
 
 <style>
