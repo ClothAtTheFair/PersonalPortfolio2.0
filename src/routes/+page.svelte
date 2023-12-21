@@ -21,7 +21,7 @@
 
 <svelte:head>
 	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
+	<meta name="description" content="personal portfolio" />
 </svelte:head>
 
 <section>
@@ -42,14 +42,16 @@
 	</h1>
 
 	<h1>
-		To put is simply, I am a...
+		To put simply, I am a...
 	</h1>
 
+	<h3>
 	{#key i}
 	<p in:typewriter={{ speed: 10}}>
 		{messages[i] || ''}
 	</p>
 	{/key}
+	</h3>
 </section>
 
 <style>
@@ -79,5 +81,13 @@
 		height: 100%;
 		top: 0;
 		display: block;
+	}
+
+	h3 {
+		display: grid;
+		width: 100%;
+		position: relative;
+		justify-content: center;
+		align-items: stretch;
 	}
 </style>
