@@ -1,7 +1,7 @@
 export const messages = [
     "Software Engineer",
     "lifelong student", 
-    "amateur hobbyist",
+    "hobbyist electronics maker",
     "bad pun maker",
     "FRC CAD mentor",
     "3D print maker",
